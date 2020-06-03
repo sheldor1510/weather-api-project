@@ -8,6 +8,7 @@ from django.contrib import messages
 
 def home(request):
     import pyowm
+    from pyowm import OWM
     owm = pyowm.OWM('54c046a7b9b579e951527fc1dd8c7d1f')
     res = owm.weather_manager()
     place = "London"
