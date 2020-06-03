@@ -12,7 +12,7 @@ def home(request):
     res = owm.weather_manager()
     place = "London"
     country = "GB"
-    observation = res.weather_at_place(f'{place}, {country}')
+    observation = owm.weather_at_place(f'{place}, {country}')
     weather = observation.weather
     temperature = weather.temperature('fahrenheit')['temp']
     temperature_in_celcius = int((temperature-32)*5/9)
